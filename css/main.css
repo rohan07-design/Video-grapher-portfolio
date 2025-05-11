@@ -19,6 +19,7 @@ body {
   font-weight: 300;
   line-height: 1.625em;
   position: relative;
+  overflow-x: hidden;
 }
 
 ol, ul {
@@ -1420,7 +1421,7 @@ nav a:hover {
 }
 
 .section-gap {
-  padding: 120px 0;
+  padding: 70px 0;
 }
 
 .lnr {
@@ -1625,6 +1626,10 @@ nav a:hover {
   }
 }
 
+#about {
+  background-color: #f1f1f1;
+}
+
 .about-right h1 {
   margin-bottom: 20px;
 }
@@ -1693,6 +1698,7 @@ nav a:hover {
   cursor: pointer;
 }
 
+
 .blog-area h1 {
   text-align: center;
   margin-bottom: 25px;
@@ -1701,7 +1707,7 @@ nav a:hover {
 }
 
 .blog-area p {
-  margin-bottom: 45px;
+  margin-bottom: 25px;
   text-align: center;
 }
 
@@ -1940,30 +1946,97 @@ h6 {
   margin: 0;
 }
 
-h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #333;
-    }
+.carousel-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 24px;
+}
 
-    .reel-grid {
-      display: grid;
-      gap: 24px;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+.reel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+  gap: 24px;
+}
 
-    .reel {
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-      background-color: #000;
-      height: 400px; /* smaller than full vertical */
-    }
+.reel {
+  flex: 0 0 calc((100% - 48px) / 3); /* 3 items with 2 gaps of 24px */
+  height: 500px;
+  background-color: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.08);
+}
 
-    .reel iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+.reel iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 24px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-button.left {
+  left: 0;
+}
+
+.scroll-button.right {
+  right: 0;
+}
+
+/* Mobile view — 1 reel per screen */
+@media (max-width: 768px) {
+  .reel {
+    flex: 0 0 100%;
+  }
+}
+
+.view-all-card {
+  background-color: #f5f5f5;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.view-all-card:hover {
+  background-color: #e0e0e0;
+}
+
+.view-all-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.collab-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #111;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+  .collab-button:hover {
+    background-color: #444;
+  }

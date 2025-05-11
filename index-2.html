@@ -106,8 +106,11 @@
 						the job is beyond reproach. inappropriate behavior is often laughed off as “boys will be boys,”
 						women face higher conduct standards especially in the workplace. That’s why it’s crucial that.
 					</p>
-					<button class="submit-btn primary-btn mt-20 text-uppercase ">Hire me now<span
-							class="lnr lnr-arrow-right"></span></button>
+					<form action="https://formspree.io/f/xnndbppb" method="POST">
+						<input type="hidden" name="message" value="New collaboration request from website" />
+						<button type="submit" class="collab-button">Collaborate With Me</button>
+					</form>
+
 				</div>
 			</div>
 		</div>
@@ -166,34 +169,77 @@
 	<!-- Start blog Area -->
 	<section class="blog-area section-gap" id="blog">
 		<div class="row justify-content-center">
-			<div class="col-md-8 pb-20 header-text">
-				<h1 class="text-black">Reels That Hook
-				</h1>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br>
-					labore et dolore magna aliqua.
-				</p>
+			<div class="col-md-8 pb-3 header-text text-center">
+				<h1 class="text-black">Reels That Hook</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br>
+					labore et dolore magna aliqua.</p>
 			</div>
 		</div>
-		<div class="reel-grid">
 
-			<!-- Reel 1 -->
-			<div class="reel">
-				<iframe src="https://drive.google.com/file/d/1QoJVzDHORy9RBur0D-KNvyvlWKRqJixF/preview" allow="autoplay"
-					allowfullscreen></iframe>
+		<div class="carousel-container">
+			<button class="scroll-button left" onclick="scrollReels(-1)">&#10094;</button>
+
+			<div class="reel-wrapper" id="reelWrapper">
+				<!-- Reel 1 -->
+				<div class="reel">
+					<iframe src="https://drive.google.com/file/d/1QoJVzDHORy9RBur0D-KNvyvlWKRqJixF/preview"
+						allow="autoplay" allowfullscreen></iframe>
+				</div>
+
+				<!-- Reel 2 -->
+				<div class="reel">
+					<iframe src="https://drive.google.com/file/d/1IdpgHPCrBCGehXy0kGRcdLr-Hv-5vKfU/preview"
+						allow="autoplay" allowfullscreen></iframe>
+				</div>
+
+				<!-- Reel 3 -->
+				<div class="reel">
+					<iframe src="https://drive.google.com/file/d/1z_oEIzVqltttD72fLTWS1o_BP9Sa_kR4/preview"
+						allow="autoplay" allowfullscreen></iframe>
+				</div>
+
+				<!-- Reel 4 -->
+				<div class="reel">
+					<iframe src="https://drive.google.com/file/d/1TkIfyFBwm4EZ_3pz4HFcNCVCYq8oZG9U/preview"
+						allow="autoplay" allowfullscreen></iframe>
+				</div>
+
+				<!-- Reel 5 -->
+				<div class="reel">
+					<iframe src="https://drive.google.com/file/d/1XXVlbJ6VK2NZv2rg0iF5h_2bT0zna2c7/preview"
+						allow="autoplay" allowfullscreen></iframe>
+				</div>
+
+				<!-- Reel 6 -->
+				<div class="reel">
+					<iframe src="https://drive.google.com/file/d/1ftpse1FyLdyPp1inYLVEGI3W8oqRKFEn/preview"
+						allow="autoplay" allowfullscreen></iframe>
+				</div>
+
+				<!-- Reel 7 -->
+				<div class="reel">
+					<iframe src="https://drive.google.com/file/d/1Y05xSHZJgmOFPmiPwqFnW0IKfisM3Ji3/preview"
+						allow="autoplay" allowfullscreen></iframe>
+				</div>
+
+				<!-- Reel 8 -->
+				<div class="reel">
+					<iframe src="https://drive.google.com/file/d/1CaaWYOjRO3PzeRt3C-ju9e9jhn-AT0cz/preview"
+						allow="autoplay" allowfullscreen></iframe>
+				</div>
+
+				<div class="reel view-all-card" onclick="location.href='all-reels.html'">
+					<div class="view-all-content">
+						<span>View All →</span>
+					</div>
+				</div>
+
+
 			</div>
 
-			<!-- Reel 2 -->
-			<div class="reel">
-				<iframe src="https://drive.google.com/file/d/1IdpgHPCrBCGehXy0kGRcdLr-Hv-5vKfU/preview" allow="autoplay"
-					allowfullscreen></iframe>
-			</div>
+			<button class="scroll-button right" onclick="scrollReels(1)">&#10095;</button>
+		</div>
 
-			<!-- Reel 3 -->
-			<div class="reel">
-				<iframe src="https://drive.google.com/file/d/1z_oEIzVqltttD72fLTWS1o_BP9Sa_kR4/preview" allow="autoplay"
-					allowfullscreen></iframe>
-			</div>
 
 	</section>
 	<!-- end blog Area -->

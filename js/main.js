@@ -147,3 +147,23 @@ $(document).ready(function(){
 
 
  });
+
+ //reels scroll
+  let currentIndex = 0;
+
+  function scrollReels(direction) {
+    const wrapper = document.getElementById('reelWrapper');
+    const reels = wrapper.querySelectorAll('.reel');
+    const isMobile = window.innerWidth <= 768;
+    const reelsPerPage = isMobile ? 1 : 3;
+    const totalPages = Math.ceil(reels.length / reelsPerPage);
+
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = 0;
+    if (currentIndex >= totalPages) currentIndex = totalPages - 1;
+
+    const reelWidth = reels[0].offsetWidth + 24; // width + gap
+    wrapper.style.transform = `translateX(-${currentIndex * reelWidth * reelsPerPage}px)`;
+  }
+
+
