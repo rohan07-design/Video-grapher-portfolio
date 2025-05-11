@@ -166,4 +166,5 @@ $(document).ready(function(){
     wrapper.style.transform = `translateX(-${currentIndex * reelWidth * reelsPerPage}px)`;
   }
 
+  
 
