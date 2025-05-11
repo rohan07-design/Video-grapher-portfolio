@@ -2007,7 +2007,8 @@ h6 {
   padding: 0 24px;
 }
 
-.reel-wrapper {
+.reel-wrapper,
+.reel-wrapper-new {
   display: flex;
   transition: transform 0.5s ease-in-out;
   will-change: transform;

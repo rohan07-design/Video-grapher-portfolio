@@ -166,5 +166,23 @@ $(document).ready(function(){
     wrapper.style.transform = `translateX(-${currentIndex * reelWidth * reelsPerPage}px)`;
   }
 
+  let currentIndexNew = 0;
+  function newScrollReels(direction) {
+    const wrapper = document.getElementById('reelWrapperNew');
+    const reels = wrapper.querySelectorAll('.reel');
+    const isMobile = window.innerWidth <= 768;
+    const reelsPerPage = isMobile ? 1 : 3;
+    const totalPages = Math.ceil(reels.length / reelsPerPage);
+
+    currentIndexNew += direction;
+    if (currentIndexNew < 0) currentIndexNew = 0;
+    if (currentIndexNew >= totalPages) currentIndexNew = totalPages - 1;
+
+    const reelWidth = reels[0].offsetWidth + 24; // width + gap
+    wrapper.style.transform = `translateX(-${currentIndexNew * reelWidth * reelsPerPage}px)`;
+  }
+
+
+
   
 
